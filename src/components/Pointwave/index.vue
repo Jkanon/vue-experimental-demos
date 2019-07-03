@@ -52,7 +52,6 @@ export default {
       const SCREEN_HEIGHT = window.innerHeight
       const container = document.createElement('div')
       this.windowHalfX = window.innerWidth / 2
-      const top = 350
       container.style.position = 'relative'
       container.style.top = `${this.top}px`
       container.style.height = `${(SCREEN_HEIGHT - this.top)}px`
@@ -151,7 +150,6 @@ export default {
     },
     onDocumentTouchStart: function(event) {
       if (event.touches.length === 1) {
-        event.preventDefault()
         this.mouseX = event.touches[0].pageX - this.windowHalfX
       }
     },
