@@ -7,6 +7,9 @@
       <router-link tag="li" to="/spacewaves">
         <a>Space Waves Effects implements by ThreeJS——空间粒子波浪特效</a>
       </router-link>
+      <router-link tag="li" to="/eyeball">
+        <a>Floating eyeball——浮动的眼球</a>
+      </router-link>
       <router-link tag="li" to="/sidebar">
         <a>Sidebar With Dynamic Background-Image——随机背景侧边栏</a>
       </router-link>

@@ -59,6 +59,11 @@ export const constantRoutes = [
     ]
   },
   {
+    path: '/eyeball',
+    component: () => import('@/views/eyeball/index'),
+    meta: { title: '浮动的眼球', icon: 'eye' }
+  },
+  {
     path: '/404',
     component: () => import('@/views/404'),
     hidden: true
