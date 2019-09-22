@@ -31,6 +31,17 @@ import Layout from '@/layout'
  */
 export const constantRoutes = [
   {
+    path: '/redirect',
+    component: Layout,
+    hidden: true,
+    children: [
+      {
+        path: '/redirect/:path*',
+        component: () => import('@/views/redirect')
+      }
+    ]
+  },
+  {
     path: '/',
     redirect: '/index'
   },
@@ -46,6 +57,11 @@ export const constantRoutes = [
     meta: { title: '空间波浪特效', icon: 'example' }
   },
   {
+    path: '/eyeball',
+    component: () => import('@/views/eyeball/index'),
+    meta: { title: '浮动的眼球', icon: 'eye' }
+  },
+  {
     path: '/sidebar',
     component: Layout,
     redirect: '/sidebar/index',
@@ -59,9 +75,17 @@ export const constantRoutes = [
     ]
   },
   {
-    path: '/eyeball',
-    component: () => import('@/views/eyeball/index'),
-    meta: { title: '浮动的眼球', icon: 'eye' }
+    path: '/modal',
+    redirect: '/modal/index',
+    component: Layout,
+    children: [
+      {
+        path: 'index',
+        name: 'Modal',
+        component: () => import('@/views/modal/index'),
+        meta: { title: '模态框', icon: 'form' }
+      }
+    ]
   },
   {
     path: '/404',
